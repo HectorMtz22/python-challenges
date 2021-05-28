@@ -1,3 +1,7 @@
+import sys
+
+sys.setrecursionlimit(10**8)
+
 number = input("Ingresa un número: ")
 
 def fibonacci(number):
