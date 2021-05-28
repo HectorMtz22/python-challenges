@@ -5,7 +5,7 @@ def fibonacci(number):
     x1 = 0
     x2 = 1
     suma = 0
-    for i in range(newNumber):
+    for i in range(1, newNumber):
         suma = x2 + x1
         x1 = x2
         x2 = suma
