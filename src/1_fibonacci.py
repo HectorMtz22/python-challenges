@@ -11,7 +11,25 @@ def fibonacci(number):
         x2 = suma
 
     return suma
-        
 
-res = fibonacci(number)
-print(res)
+
+def fibonacci_recursivo(number, actual, pasado, antepasado):
+    number = int(number)
+    actual = pasado + antepasado
+    antepasado = pasado
+    pasado = actual
+    if (number <= 2):
+        print(actual)
+        return actual
+    else:
+        fibonacci_recursivo(number - 1, actual, pasado, antepasado)
+
+    return 0 
+
+# res = fibonacci(number)
+# print(res)
+        
+actual = 0
+pasado = 1
+antepasado = 0
+fibonacci_recursivo(number, actual, pasado, antepasado)
