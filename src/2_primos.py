@@ -15,6 +15,9 @@ def welcome():
     number = input("Ingresa un número positivo: ")
     try:
         number = int(number)
+        if (number < 0):
+            print("la entrada debe ser positiva")
+            return False
         if (isPrime(number)):
             print("El número es primo")
         else:
