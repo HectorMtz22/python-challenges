@@ -11,14 +11,23 @@ def isPrime(number, isFirstTime = True):
         
     return True
 
-number = input("Ingresa un número positivo: ")
-try:
-    number = int(number)
-    if (isPrime(number)):
-        print("El número es primo")
-    else:
-        print("El número no es primo")
+def welcome():
+    number = input("Ingresa un número positivo: ")
+    try:
+        number = int(number)
+        if (isPrime(number)):
+            print("El número es primo")
+        else:
+            print("El número no es primo")
     
-except ValueError:
-    print("La entrada es incorrecta")
+        return True
 
+    except ValueError:
+        print("La entrada es incorrecta")
+        return False
+
+loop = True
+while(loop):
+    valor = welcome()
+    if valor:
+        loop = False
