@@ -1,5 +1,3 @@
-number = input("Ingresa un número positivo: ")
-
 def isPrime(number, isFirstTime = True):
     number = int(number)
     for i in range(2, number + 1):
@@ -13,9 +11,14 @@ def isPrime(number, isFirstTime = True):
         
     return True
 
-
-if (isPrime(number)):
-    print("El número es primo")
-else:
-    print("El número no es primo")
+number = input("Ingresa un número positivo: ")
+try:
+    number = int(number)
+    if (isPrime(number)):
+        print("El número es primo")
+    else:
+        print("El número no es primo")
     
+except ValueError:
+    print("La entrada es incorrecta")
+
