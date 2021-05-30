@@ -1,13 +1,22 @@
 from random import random
 
-player_value = input("Introduce un valor\nr para piedra\np para papel\nt para tijera\n")
-cpu_value = int(random() * 3)
-
 rules = {
     "r": 0,
     "p": 1,
     "t": 2
 }
+
+isInvalid = True
+while (isInvalid):
+    player_value = input("Introduce un valor\nr para piedra\np para papel\nt para tijera\n")
+    if (player_value == "r" or player_value == "p" or player_value == "t"):
+        isInvalid = False
+    else:
+        print("Vuelve a intentarlo")
+    
+
+
+cpu_value = int(random() * 3)
 
 toPrint = ["piedra", "papel", "tijera"]
 
