@@ -1,3 +1,9 @@
+#import sys
+
+#sys.setrecursionlimit(10**8)
+
+# For recursion limit
+
 def calculate_e(number):
     total = 0
     for i in range(0, number):
@@ -24,4 +30,4 @@ def welcome():
         print("La entrada es incorrecta")
         return False
 
-print(welcome())
+print(welcome()) # Executes the program with welcome func
