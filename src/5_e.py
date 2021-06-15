@@ -7,7 +7,7 @@
 def calculate_e(number):
     total = 0
     for i in range(0, number):
-        formula = (1 ** i) / factorial(i)
+        formula = (1 ** i) / factorial_with_cycle(i)
         total += formula
     
     return total
@@ -19,6 +19,13 @@ def factorial(n, suma = 1):
         return factorial(n - 1, suma) # Acuerdate siempre de retornar
     else:
         return suma
+
+def factorial_with_cycle(n):
+    suma = 1
+    for i in range(n, 1, -1):
+        suma = suma * i
+    
+    return suma
 
 def welcome():
     number = input("Ingresa un número positivo: ")
