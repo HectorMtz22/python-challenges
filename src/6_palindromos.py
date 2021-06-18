@@ -1,10 +1,7 @@
 def palindroma(word, i, j):
-    if (j < i):
-        return 1
-
-    if (word[i] == word[j] and not (i == j) and not (j < i)):
+    if (word[i] == word[j] and not (j <= i)):
         return palindroma(word, i + 1, j - 1)
-    elif (i == j and not (j < i)):
+    elif (j <= i):
         return 1
     else:
         return 0
