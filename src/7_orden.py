@@ -7,5 +7,18 @@ def bubblesort(array):
     return array
 
 
-res = bubblesort([1, 4, 32, 2, 5])
-print(res)
+def welcome():
+    iteraciones = input("Ingresa una cantidad\n")
+    array = []
+    for i in range(0, int(iteraciones)):
+        value = input("Ingresa un número\n")
+        array.append(int(value))
+    
+    return array
+
+try:
+    array = welcome()
+    res = bubblesort(array)
+    print(res)
+except ValueError:
+    print("Error, Try Again")
