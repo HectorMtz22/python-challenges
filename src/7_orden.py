@@ -2,9 +2,8 @@ def bubblesort(array):
     for i, v1 in enumerate(array):
         for j, v2 in enumerate(array):
             if (v1 < v2):
-                temp = array[i]
-                array[i] = array[j]
-                array[j] = temp
+                # Cool notation for swap variables
+                array[i], array[j] = array[j], array[i]
     return array
 
 
