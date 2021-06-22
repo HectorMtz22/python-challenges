@@ -13,16 +13,22 @@ def qsort(L):
 
 def welcome():
     iteraciones = input("Ingresa una cantidad\n")
+    tipo = input("Ingresa un número, 0 para qsort y 1 para bubblesort\n")
     array = []
     for i in range(0, int(iteraciones)):
         value = input("Ingresa un número\n")
         array.append(int(value))
     
-    return array
+    return array, tipo
 
 try:
-    array = welcome()
-    res = qsort(array)
+    array, tipo = welcome()
+    if (int(tipo) == 0):
+        print("Método Quicksort\n")
+        res = qsort(array)
+    else:
+        print("Método Bubblesort\n")
+        res = bubblesort(array)
     print(res)
 except ValueError:
     print("Error, Try Again")
