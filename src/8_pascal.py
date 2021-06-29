@@ -12,5 +12,13 @@ def triangulo(n, k):
     formula = temp_n / (temp_n_k * temp_k)
     return formula
 
-values = triangulo(31, 5)
-print(values)
+def welcome(): 
+    try: 
+        var_1 = input("Ingresa un número n: ")
+        var_2 = input("Ingresa un número k: ")
+        return triangulo(int(var_1), int(var_2))
+    except ValueError:
+        print("An unexpected error ocurred")
+
+
+print(welcome())
