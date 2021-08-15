@@ -1,11 +1,15 @@
 number = input("Ingresa un numero: ") 
 base = input("Ingresa la base: ")
 
-def residuo(number, base):
+def residuo(number, base, iteration = 0):
     cociente = number // base
-    print("Cociente:", cociente)
     res = number % base
-    print("Residuo:", res)
-    return
+    print("  " * iteration, res, cociente)
 
-residuo(int(number), int(base))
+    if (cociente < base): 
+        return
+    else:
+        return residuo(cociente, base, iteration + 1)
+
+base = int(base)
+residuo(int(number), base)
