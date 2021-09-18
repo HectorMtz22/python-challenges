@@ -23,12 +23,9 @@ def fibonacci_recursivo(number, actual, pasado, antepasado):
     antepasado = pasado
     pasado = actual
     if (number <= 2):
-        print(actual)
         return actual
-    else:
-        fibonacci_recursivo(number - 1, actual, pasado, antepasado)
 
-    return 0 
+    return fibonacci_recursivo(number - 1, actual, pasado, antepasado)
 
 # res = fibonacci(number)
 # print(res)
@@ -36,4 +33,4 @@ def fibonacci_recursivo(number, actual, pasado, antepasado):
 actual = 0
 pasado = 1
 antepasado = 0
-fibonacci_recursivo(number, actual, pasado, antepasado)
+print(fibonacci_recursivo(number, actual, pasado, antepasado))
