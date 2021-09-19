@@ -1,8 +1,10 @@
-import sys
+# import sys
+from tail_recursion import tail_recursive, recurse
 
-sys.setrecursionlimit(10**8)
 
-number = input("Ingresa un número: ")
+# sys.setrecursionlimit(10**8)
+
+number = input("Ingresa un número: ") 
 
 def fibonacci(number):
     newNumber = int(number)
@@ -17,6 +19,7 @@ def fibonacci(number):
     return suma
 
 
+@tail_recursive
 def fibonacci_recursivo(number, actual, pasado, antepasado):
     number = int(number)
     actual = pasado + antepasado
@@ -25,12 +28,12 @@ def fibonacci_recursivo(number, actual, pasado, antepasado):
     if (number <= 2):
         return actual
 
-    return fibonacci_recursivo(number - 1, actual, pasado, antepasado)
+    recurse(number - 1, actual, pasado, antepasado)
 
-# res = fibonacci(number)
-# print(res)
         
 actual = 0
 pasado = 1
 antepasado = 0
-print(fibonacci_recursivo(number, actual, pasado, antepasado))
+res = fibonacci_recursivo(number, actual, pasado, antepasado)
+# res = fibonacci(number)
+print(res)
